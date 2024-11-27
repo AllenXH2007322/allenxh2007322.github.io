@@ -19,7 +19,7 @@ header h1 {
 }
 
 .intro, .platforms, .links {
-    margin: 20px;
+    margin: 50px;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
