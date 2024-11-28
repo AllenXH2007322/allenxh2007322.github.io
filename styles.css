@@ -1,14 +1,28 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 20px;
-    padding: 20px;
+/* 定义颜色变量，方便全局修改 */
+:root {
+    --primary-color: #aaa800;
+    --accent-color: #4CAF50;
+    --link-color: #5976ff;
+    --footer-bg: #333;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --white: #fff;
 }
 
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6; /* 增加行间距，使文字更易读 */
+}
+
+/* 页头样式 */
 header {
-    background-color: #aaa800;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
     text-align: center;
     padding: 50px;
 }
@@ -18,22 +32,26 @@ header h1 {
     margin-bottom: 10px;
 }
 
+/* 主要内容区（介绍、平台、链接） */
 .intro, .platforms, .links {
-    margin: 20px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* 限制最大宽度，保持排版整齐 */
 }
 
+/* 各部分标题 */
 .intro h2, .platforms h2, .links h2 {
-    color: #4CAF50;
+    color: var(--accent-color);
     font-size: 1.5em;
     margin-bottom: 15px;
 }
 
+/* 链接样式 */
 a {
-    color: #5976ff;
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -41,12 +59,44 @@ a:hover {
     text-decoration: underline;
 }
 
+/* 底部样式 */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: var(--footer-bg);
+    color: var(--white);
     margin-top: 20px;
+}
+
+/* 列表样式 */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* 响应式设计（适配小屏设备） */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .intro, .platforms, .links {
+        padding: 15px;
+        margin: 10px;
+    }
 }
 
 ul {
