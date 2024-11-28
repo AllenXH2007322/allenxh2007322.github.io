@@ -27,7 +27,7 @@ themeToggleButton.addEventListener('click', () => {
 
 // 监听标签页切换事件，统一更改标题
 const originalTitle = document.title; // 保存原始标题
-const newTitle = "你切换到了其他网页"; // 切换到其他网页时显示的标题
+const newTitle = "回來看看( ´•̥̥̥ω•̥̥̥` )"; // 切换到其他网页时显示的标题
 
 document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
