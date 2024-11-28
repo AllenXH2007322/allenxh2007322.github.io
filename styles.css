@@ -9,16 +9,6 @@
     --white: #fff;
 }
 
-/* 暗模式样式（默认） */
-[data-theme="dark"] {
-    --primary-color: #333;
-    --accent-color: #7f7f7f;
-    --link-color: #ffcc00;
-    --footer-bg: #222;
-    --text-color: #fff;
-    --background-color: #111;
-}
-
 /* 全局样式 */
 body {
     font-family: Arial, sans-serif;
@@ -26,7 +16,7 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 20px;
-    line-height: 1.6;
+    line-height: 1.6; /* 增加行间距，使文字更易读 */
 }
 
 /* 页头样式 */
@@ -35,11 +25,36 @@ header {
     color: var(--white);
     text-align: center;
     padding: 50px;
+    position: relative; /* 为了能够将按钮定位到右边 */
 }
 
 header h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
+    display: inline-block; /* 保持标题水平排列 */
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;  /* 调整按钮距离右边的位置 */
+    background-color: var(--link-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5em;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.1); /* 增加悬浮时的动画效果 */
+}
+
+.theme-toggle:focus {
+    outline: none; /* 移除按钮点击时的边框 */
 }
 
 /* 主要内容区（介绍、平台、链接） */
@@ -49,7 +64,7 @@ header h1 {
     background-color: var(--white);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    max-width: 800px; /* 限制最大宽度，保持排版整齐 */
 }
 
 /* 各部分标题 */
@@ -121,4 +136,25 @@ li {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
+}
+
+/* 自定义亮暗模式主题 */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode header {
+    background-color: #222;
+}
+
+body.dark-mode .intro,
+body.dark-mode .platforms,
+body.dark-mode .links {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode footer {
+    background-color: #222;
 }
