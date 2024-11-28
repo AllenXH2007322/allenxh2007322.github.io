@@ -9,6 +9,16 @@
     --white: #fff;
 }
 
+/* 暗模式样式（默认） */
+[data-theme="dark"] {
+    --primary-color: #333;
+    --accent-color: #7f7f7f;
+    --link-color: #ffcc00;
+    --footer-bg: #222;
+    --text-color: #fff;
+    --background-color: #111;
+}
+
 /* 全局样式 */
 body {
     font-family: Arial, sans-serif;
@@ -16,7 +26,7 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 20px;
-    line-height: 1.6; /* 增加行间距，使文字更易读 */
+    line-height: 1.6;
 }
 
 /* 页头样式 */
@@ -39,7 +49,7 @@ header h1 {
     background-color: var(--white);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* 限制最大宽度，保持排版整齐 */
+    max-width: 800px;
 }
 
 /* 各部分标题 */
@@ -99,16 +109,6 @@ li {
     }
 }
 
-ul {
-    list-style-type: none;
-}
-
-li {
-    margin: 10px 0;
-    font-size: 1.1em;
-}
-
-
 /* 自定义滚动条样式 */
 ::-webkit-scrollbar {
     width: 8px;
@@ -122,5 +122,3 @@ li {
 ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
 }
-
-
