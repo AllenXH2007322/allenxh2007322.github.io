@@ -24,3 +24,17 @@ themeToggleButton.addEventListener('click', () => {
         localStorage.removeItem('theme');  // 删除本地存储的模式设置
     }
 });
+
+// 监听标签页切换事件，统一更改标题
+const originalTitle = document.title; // 保存原始标题
+const newTitle = "你切换到了其他网页"; // 切换到其他网页时显示的标题
+
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        // 当标签页切换出去时，统一更改为同一个标题
+        document.title = newTitle;
+    } else {
+        // 当标签页重新激活时，恢复原始标题
+        document.title = originalTitle;
+    }
+});
