@@ -1,12 +1,24 @@
-function toggleTheme() {
-    // 切换 "dark-mode" 类
-    document.body.classList.toggle('dark-mode');
-    
-    // 切换按钮的图标
-    const button = document.querySelector('.theme-toggle');
-    if (document.body.classList.contains('dark-mode')) {
-        button.textContent = '🌞'; // 显示太阳图标
-    } else {
-        button.textContent = '🌙'; // 显示月亮图标
-    }
+// 选择切换按钮和图标
+const toggleButton = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+
+// 初始化：检测是否已经保存过主题
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
 }
+
+// 切换亮暗模式
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'light');
+    }
+});
