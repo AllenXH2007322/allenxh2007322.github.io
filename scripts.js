@@ -1,16 +1,12 @@
-// 获取切换按钮
-const themeToggle = document.getElementById('theme-toggle');
-
-// 初始化主题
-const currentTheme = localStorage.getItem('theme') || 'light';
-if (currentTheme === 'dark') {
-    document.body.setAttribute('data-theme', 'dark');
+function toggleTheme() {
+    // 切换 "dark-mode" 类
+    document.body.classList.toggle('dark-mode');
+    
+    // 切换按钮的图标
+    const button = document.querySelector('.theme-toggle');
+    if (document.body.classList.contains('dark-mode')) {
+        button.textContent = '🌞'; // 显示太阳图标
+    } else {
+        button.textContent = '🌙'; // 显示月亮图标
+    }
 }
-
-// 切换主题
-themeToggle.addEventListener('click', () => {
-    const newTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    document.body.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme); // 保存用户选择的主题
-});
-
