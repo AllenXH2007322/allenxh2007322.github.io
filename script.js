@@ -24,3 +24,25 @@ themeToggleButton.addEventListener('click', () => {
         localStorage.removeItem('theme');  // 删除本地存储的模式设置
     }
 });
+
+// 修改标签页标题的函数
+function updateTitle(newTitle) {
+    document.title = newTitle;
+}
+
+// 页头切换时修改标签页标题
+document.getElementById('home-link').addEventListener('click', function() {
+    updateTitle('歐陽曉華的個人網站');
+});
+
+document.getElementById('about-link').addEventListener('click', function() {
+    updateTitle('自我介紹 | 歐陽曉華');
+});
+
+document.getElementById('platforms-link').addEventListener('click', function() {
+    updateTitle('平台賬戶 | 歐陽曉華');
+});
+
+document.getElementById('links-link').addEventListener('click', function() {
+    updateTitle('次要平台＆連結 | 歐陽曉華');
+});
