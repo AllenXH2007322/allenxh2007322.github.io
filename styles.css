@@ -7,6 +7,11 @@
     --text-color: #333;
     --background-color: #f9f9f9;
     --white: #fff;
+    --dark-bg-color: #333;
+    --dark-text-color: #fff;
+    --dark-header-bg: #444;
+    --dark-content-bg: #555;
+    --dark-footer-bg: #444;
 }
 
 /* 全局样式 */
@@ -25,36 +30,29 @@ header {
     color: var(--white);
     text-align: center;
     padding: 50px;
-    position: relative; /* 为了能够将按钮定位到右边 */
+    position: relative;
 }
 
+/* 主题切换按钮 */
+button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+/* 页头标题 */
 header h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    display: inline-block; /* 保持标题水平排列 */
-}
-
-.theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;  /* 调整按钮距离右边的位置 */
-    background-color: var(--link-color);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 1.5em;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.theme-toggle:hover {
-    background-color: var(--accent-color);
-    transform: scale(1.1); /* 增加悬浮时的动画效果 */
-}
-
-.theme-toggle:focus {
-    outline: none; /* 移除按钮点击时的边框 */
 }
 
 /* 主要内容区（介绍、平台、链接） */
@@ -140,21 +138,21 @@ li {
 
 /* 自定义亮暗模式主题 */
 body.dark-mode {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
 }
 
 body.dark-mode header {
-    background-color: #222;
+    background-color: var(--dark-header-bg);
 }
 
 body.dark-mode .intro,
 body.dark-mode .platforms,
 body.dark-mode .links {
-    background-color: #444;
-    color: #fff;
+    background-color: var(--dark-content-bg);
+    color: var(--dark-text-color);
 }
 
 body.dark-mode footer {
-    background-color: #222;
+    background-color: var(--dark-footer-bg);
 }
