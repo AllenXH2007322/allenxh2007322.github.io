@@ -82,22 +82,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* 邮箱按钮 */
-.email-button {
-    background-color: var(--accent-color);
-    color: var(--white);
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.email-button:hover {
-    background-color: #45a049;
-}
-
 /* 底部样式 */
 footer {
     text-align: center;
