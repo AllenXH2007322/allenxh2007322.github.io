@@ -56,7 +56,7 @@ header h1 {
 }
 
 /* 主要内容区（介绍、平台、链接） */
-.intro, .platforms, .contact, .links {
+.intro, .platforms, .links, .contact {
     margin: 20px auto;
     padding: 20px;
     background-color: var(--white);
@@ -66,7 +66,7 @@ header h1 {
 }
 
 /* 各部分标题 */
-.intro h2, .platforms h2, .contact h2, .links h2 {
+.intro h2, .platforms h2, .links h2, .contact h2 {
     color: var(--accent-color);
     font-size: 1.5em;
     margin-bottom: 15px;
@@ -82,20 +82,20 @@ a:hover {
     text-decoration: underline;
 }
 
-/* 邮箱按钮样式 */
+/* 邮箱按钮 */
 .email-button {
-    display: inline-block;
     background-color: var(--accent-color);
     color: var(--white);
+    border: none;
     padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
     font-size: 1.1em;
-    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 .email-button:hover {
-    background-color: #366f35;
+    background-color: #45a049;
 }
 
 /* 底部样式 */
@@ -132,7 +132,7 @@ li {
         font-size: 2em;
     }
 
-    .intro, .platforms, .contact, .links {
+    .intro, .platforms, .links, .contact {
         padding: 15px;
         margin: 10px;
     }
@@ -164,12 +164,9 @@ body.dark-mode header {
 
 body.dark-mode .intro,
 body.dark-mode .platforms,
-body.dark-mode .contact,
-body.dark-mode .links {
+body.dark-mode .links,
+body.dark-mode .contact {
     background-color: var(--dark-content-bg);
     color: var(--dark-text-color);
 }
 
-body.dark-mode footer {
-    background-color: var(--dark-footer-bg);
-}
