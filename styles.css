@@ -102,6 +102,41 @@ li {
     font-size: 1.1em;
 }
 
+/* 邮箱区域样式 */
+.email-section {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.email-section h3 {
+    color: var(--accent-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.email-section p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* 快速发邮件按钮 */
+.email-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.email-button:hover {
+    background-color: #366f35;
+}
+
 /* 响应式设计（适配小屏设备） */
 @media (max-width: 768px) {
     body {
