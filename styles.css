@@ -95,10 +95,10 @@ footer {
 /* 小人趴在页脚 */
 footer .character {
     position: absolute;
-    bottom: 150px; /* 控制小人图片从底部趴出 */
+    bottom: 110px; /* 控制小人图片从底部趴出 */
     left: 50%;
     transform: translateX(-50%);
-    width: 100px; /* 设置小人图片宽度，可以根据需要调整 */
+    width: 150px; /* 设置小人图片宽度，可以根据需要调整 */
     z-index: 10;
 }
 
