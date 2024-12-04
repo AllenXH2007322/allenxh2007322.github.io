@@ -84,11 +84,31 @@ a:hover {
 
 /* 底部样式 */
 footer {
+    position: relative;
     text-align: center;
     padding: 20px;
     background-color: var(--footer-bg);
     color: var(--white);
-    margin-top: 20px;
+    margin-top: 40px; /* 留出空间让小人图片不遮挡 */
+}
+
+/* 小人趴在页脚 */
+footer .character {
+    position: absolute;
+    bottom: -50px; /* 控制小人图片从底部趴出 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* 设置小人图片宽度，可以根据需要调整 */
+    z-index: 10;
+}
+
+/* 亮暗模式下小人图片切换 */
+body.dark-mode footer .character {
+    content: url('dark-mode-character.png'); /* 替换为暗色模式的图片路径 */
+}
+
+body:not(.dark-mode) footer .character {
+    content: url('light-mode-character.png'); /* 替换为亮色模式的图片路径 */
 }
 
 /* 列表样式 */
@@ -151,5 +171,12 @@ body.dark-mode .platforms,
 body.dark-mode .links,
 body.dark-mode .contact {
     background-color: var(--dark-content-bg);
-    color: var(--dark-text-color);
+}
+
+body.dark-mode footer {
+    background-color: var(--dark-footer-bg);
+}
+
+body.dark-mode a {
+    color: var(--link-color);
 }
