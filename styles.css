@@ -153,3 +153,29 @@ body.dark-mode .contact {
     background-color: var(--dark-content-bg);
     color: var(--dark-text-color);
 }
+
+/* 内容区左移调整 */
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start; /* 确保内容左对齐 */
+    margin-top: 30px;
+}
+
+/* 主要内容区（左侧部分） */
+.main-content {
+    flex: 1;
+    padding-right: 20px; /* 为右侧人物图腾出空间 */
+}
+
+/* 右侧人物图片样式 */
+.sidebar {
+    flex-shrink: 0;
+    width: 300px; /* 控制图片的宽度 */
+}
+
+.character-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* 圆角效果 */
+}
